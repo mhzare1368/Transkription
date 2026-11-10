@@ -1,0 +1,10 @@
+faster-whisper>=1.1.0
+# PyAV 19 dropped an option that faster-whisper (up to 1.2.1) still passes when it opens a file,
+# so every transcription fails with it. Remove this line once faster-whisper supports PyAV 19.
+av<19
+fastapi>=0.110
+uvicorn>=0.29
+python-multipart>=0.0.9
+
+# Optional, for speaker recognition (large download, also needs HF_TOKEN):
+# pyannote.audio
